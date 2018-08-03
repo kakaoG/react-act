@@ -1,0 +1,101 @@
+@import "../lib/animate";
+#index {
+  .banner {
+    background-color: grey;
+    img { display: block; width: 100%;}
+  }
+  .form {
+    margin-top: .7rem;
+    border-top: .02rem solid #efeeee;
+    border-bottom: .02rem solid #efeeee;
+    padding: 0 .3rem;
+    .form-item {
+      padding: .15rem 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      line-height: .7rem;
+      &>*:not(.form-group__message) { height: .7rem; font-size: .28rem;}
+      .label {
+        flex: 0 0 22%;
+      }
+      input {
+        flex: 1 1 50%;
+        text-indent: .3rem;
+        outline: none;
+        border-radius: 0;
+      }
+      &.img-code {
+        img {
+          flex: 0 0 1.4rem;
+        }
+      }
+      &.sms-code {
+        button, .timer {
+          flex: 0 0 1.4rem;
+          font-size: .24rem;
+          color: #fe6c35;
+          box-sizing: border-box;
+          border: 1px solid #fe6c35;
+          /*border-radius: .08rem;*/
+          background-color: #fff;
+          text-align: center;
+          outline: none;
+        }
+        .timer { border-color: transparent!important;}
+      }
+    }
+  }
+  footer.btn-wrapper {
+    margin: 1.9rem .7rem 0;
+    padding: 0;
+    height: auto;
+    button {
+      width: 100%;
+      font-size: .28rem;
+      height: .8rem;
+      color: #fff;
+      background-color: #fe6c35;
+      border: none;
+      letter-spacing: .1rem;
+      border-radius: .08rem;
+      &:disabled {
+        background-color: #ccc!important;
+        cursor: not-allowed;
+      }
+    }
+  }
+  .rule {
+    margin-top: 1rem;
+    .rule-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #67b0ff;
+      .line() {
+      content: '';
+      height: 1px;
+      width: 1rem;
+      background-color: #67b0ff;
+    }
+      &:before {
+        .line();
+        margin-right: .35rem;
+      }
+      &:after {
+        .line();
+        margin-left: .35rem;
+      }
+    }
+    .rule-content {
+      padding: .3rem .7rem;
+      line-height: 1.5;
+    }
+  }
+}
+.empty {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: .3rem;
+  letter-spacing: 3px;
+}
